@@ -16,6 +16,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: grid;
+  align-items: center;
 }
 
 h1,
@@ -35,4 +37,237 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+
+.content {
+  max-inline-size: 1140px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 399px;
+  gap: 30px;
+  align-items: end;
+}
+
+.result {
+  display: grid;
+  gap: 16px;
+  grid-template-rows: 386px 54px;
+}
+
+.result__video-container {
+  position: relative;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 225px 212px 194px;
+  gap: 40px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.search-form__textfield {
+  color: rgba(255, 255, 255, 0.70);
+  font-size: inherit;
+  font-family: inherit;
+  background-color: #1b1919;
+  inline-size: 100%;
+  border: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+.search-form__textfield:focus-visible {
+  outline: none;
+}
+
+.search-form__label {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+  outline-offset: 2px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFF;
+  align-self: center;  
+}
+
+.search-form__label-text {
+  appearance: none;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
+  content: '';
+  inline-size: 15px;
+  block-size: 15px;
+  background-color: #FFF;
+}
+
+.button {
+  cursor: pointer;
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 700;
+  block-size: 34px;
+  border: 1px solid #FFF;
+}
+
+.button:focus {
+  background-color: transparent;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__submit-button {
+  align-self: end;
+  inline-size: 100%;
+}
+
+.content__details {
+  display: grid;
+  gap: 26px;
+  grid-template-rows: 210px 298px;
+}
+
+.title {
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  display: grid;
+  gap: 30px;
+  overflow: hidden scroll;
+}
+
+.content__card-link {
+  display: block;
+  margin: 2px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  text-decoration: none;
+  background-color: #545050;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card-description-container {
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  gap: 6px;
+}
+
+.content__video-card-title {
+  font-family: Oswald;
+  font-size: 30px;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  line-height: 16.2px; /* 90% */
+}
+
+.content__video-card-thumbnail {
+  inline-size: 100%;
+  block-size: 103px;
+  padding: 2px;
+}
+
+.more-button {
+  inline-size: 399px;
 }
